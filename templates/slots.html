@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booked Slots</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
+        th { background-color: #333; color: white; }
+    </style>
+</head>
+<body>
+    <h2>Booked Appointments</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Time</th>
+        </tr>
+        {% for appt in appointments %}
+        <tr>
+            <td>{{ appt[2] }}</td>
+            <td>{{ appt[0] }}</td>
+            <td>{{ appt[1] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <p><a href="/">Back to Booking</a></p>
+</body>
+</html>
